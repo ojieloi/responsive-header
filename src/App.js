@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+
+// Components
+import BottomNav from './components/bottomNavbar/bottomNav';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="app">
+            <div className='container'>
+
+                {/* Navbar */}
+                <nav className="navbar">
+                    {/* Main Navbar */}
+                    {/* Compiled of all components for top, main, and mobile navbars */}
+                    <BottomNav />
+                </nav>
+
+                {/* Extra space to show vertical scrolling is active */}
+                <div className='extra'></div>
+
+            </div>
+        </div>
+    );
 }
 
 export default App;

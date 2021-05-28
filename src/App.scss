@@ -1,0 +1,27 @@
+$lightestText: #666666;
+
+* {
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+
+.app {
+    background-color: $lightestText;
+
+    .container {
+        background-color: white;
+        margin: 0 auto;
+        max-width: 1200px;
+
+        .extra {
+            background-color: #414141;
+            height: 100vh;
+        }
+    }
+}
+
+
+
+

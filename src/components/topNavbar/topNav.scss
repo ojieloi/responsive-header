@@ -1,0 +1,45 @@
+$primary: #b81830;
+$darkText: #181818;
+$lightText: #404040;
+
+// Noto Sans Font
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+.top {
+    align-items: center;
+    background-color: $darkText;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Noto Sans';
+    height: 45px;
+    justify-content: space-between;
+
+    div, span, a {
+        align-items: center;
+        color: white;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
+
+    a {
+        margin: 0;
+        padding: 0 12px;
+        text-decoration: none;
+
+        // Set cart background to red
+        &#cart {
+            background-color: $primary;
+        }
+
+        p {
+            font-size: 14px;
+            font-weight: 700;
+            margin-left: 4px;
+        }
+
+        &:hover {
+            background-color: $lightText;
+        }
+    }
+}

@@ -1,0 +1,166 @@
+// Colors
+$primary: #b81830;
+$darkText: #181818;
+$lightestText: #666666;
+$pageBackground: #f4f4f4;
+
+// Noto Sans Font
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+// Bottom Navbar
+.navbar-bottom {
+    align-items: center;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Noto Sans';
+    height: 70px;
+    justify-content: space-between;
+    padding: 0 12px;
+    position: relative;
+
+    // Brand logo
+    img {
+        cursor: pointer;
+        height: 48px;
+    }
+
+    span {
+        cursor: pointer;
+    }
+
+    div, span, li {
+        align-items: center;
+        color: $darkText;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+    }
+
+    p {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        font-size: 16px;
+        font-weight: bold;
+        height: 100%;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &#search {
+            font-size: 16px;
+            font-weight: 400;
+            text-transform: none;
+        }
+
+        &.link {
+            border-bottom: 0px solid transparent;
+            box-sizing: border-box;
+            margin-left: 24px;
+            transition: all 0.1s ease-out;
+
+            &:hover {
+                border-bottom: 6px solid $primary;
+            }
+
+            &:active {
+                border-bottom: 10px solid $primary;
+            }
+        }
+    }
+
+    // Icons
+    span.menu, .user, .cart {
+        display: none;
+    }
+
+
+    // Menu
+    .menu {
+        .menu-content {
+            background-color: white;
+            box-shadow: 0px 2px 5px #0000004d;
+            box-sizing: border-box;
+            display: block;
+            height: 0px;
+            overflow: hidden;
+            position: absolute;
+            top: 100%;
+            transition: all 0.3s ease-out;
+            width: 100%;
+
+            ul {
+                list-style-type: none;
+                padding: 32px;
+
+                li {
+                    height: 45px;
+                    width: 250px;
+                    width: 100%;
+
+                    p {
+                        border-left: 4px solid transparent;
+                        font-size: 14px;
+                        height: 100%;
+                        padding: 0 12px;
+                        text-transform: none;
+                        transition: all 0.1s ease-out;
+                        width: 100%;
+
+                        &:hover {
+                            border-left: 4px solid $primary;
+                            color: $lightestText;
+                        }
+
+                        &:active {
+                            border-left: 8px solid $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// Mobile Navbar Component
+.mobile {
+    height: 100%;
+    left: -100%;
+    position: fixed;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+}
+
+// Breakpoint
+@media screen and (max-width: 900px) {
+    // Top Navbar
+    .navbar-top {
+        display: none;
+    }
+
+    // Main Navbar
+    .navbar-bottom {
+        height: 50px;
+        padding: 0 12px 0 0;
+
+        img {
+            height: 32px;
+        }
+
+        .link {
+            display: none;
+        }
+
+        // Icons
+        span.menu, .search, .user, .cart {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+        }
+
+        p#search {
+            display: none;
+        }
+    }
+}

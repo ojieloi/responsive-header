@@ -1,0 +1,123 @@
+// Colors
+$primary: #b81830;
+$darkText: #181818;
+$lightText: #404040;
+$lightestText: #666666;
+$border: #d0d0d0;
+$pageBackground: #f4f4f4;
+
+// Noto Sans Font
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+
+// Mobile Menu
+.mobile-navbar {
+    background-color: $pageBackground;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-bottom: 10px;
+    width: 100%;
+
+    span, p, li, .header {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    // Menu Header
+    .header {
+        background-color: $darkText;
+        color: white;
+        height: 45px;
+        justify-content: space-between;
+        padding: 4px 20px;
+    }
+
+    .navigator {
+        position: relative;
+        width: 100%;
+
+        // Main Menu
+        .navigator-links {
+            left: 0%;
+            overflow-x: hidden;
+            position: absolute;
+            transition: all 0.2s ease-out;
+            width: 100%;
+        }
+
+        // Solutions Submenu
+        .so-section {
+            height: 100%;
+            left: 100%;
+            position: absolute;
+            transition: all 0.2s ease-out;
+            width: 100%;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+
+        // Set default list styles for all sections
+        li {
+            cursor: pointer;
+            height: 45px;
+            padding: 0 20px;
+        }
+
+        // Main Menu Navigation Section
+        &.nav-section {
+            background-color: white;
+
+            li {
+                border-bottom: 1px solid $border;
+                box-sizing: border-box;
+                justify-content: space-between;
+
+                p {
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        // Help, Where to Buy / Rent, Section
+        &.qa-section {
+            margin-top: 12px;
+
+            li {
+                p {
+                    margin: 0 12px;
+                }
+            }
+        }
+
+        // Solutions Submenu
+        &.so-section {
+            background-color: $pageBackground;
+
+            li {
+                border-bottom: 1px solid $border;
+                box-sizing: border-box;
+                justify-content: space-between;
+
+                &:nth-of-type(1) {
+                    background-color: white;
+                    justify-content: unset;
+                }
+
+                p {
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
